@@ -14,7 +14,7 @@ namespace xadrez_console
             p = new Posicao(3, 4);
 
             Console.WriteLine(p);
-            */
+            
 
             Tabuleiro tab = new Tabuleiro(8,8);
 
@@ -23,6 +23,13 @@ namespace xadrez_console
             tab.colocarPeca(new Rei(tab, Cor.Preta),new Posicao(2,4));
 
             Tela.imprimirTabuleiro(tab);
+            */
+
+            PosicaoXadrez pos = new PosicaoXadrez('a', 1);
+
+            Console.WriteLine(pos);
+
+            Console.WriteLine(pos.toPosicao());
 
             Console.ReadLine();
 

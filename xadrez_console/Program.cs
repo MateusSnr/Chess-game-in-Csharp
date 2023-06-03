@@ -24,6 +24,8 @@ namespace xadrez_console
 
             Tela.imprimirTabuleiro(tab);
 
+            Console.ReadLine();
+
         }
     }
 }

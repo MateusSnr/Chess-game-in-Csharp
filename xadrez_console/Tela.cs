@@ -13,13 +13,21 @@ namespace xadrez_console
             Console.WriteLine();
             imprimirPecasCapturadas(partida);
             Console.WriteLine("Turno: " + partida.turno);
-            Console.Write("Aguardando jogada:  " + partida.jogadorAtual);
-            Console.WriteLine();
-            if (partida.xeque)
+            if (!partida.terminada)
             {
-                Console.WriteLine("Xeque!");
+                Console.Write("Aguardando jogada:  " + partida.jogadorAtual);
+                Console.WriteLine();
+                if (partida.xeque)
+                {
+                    Console.WriteLine("Xeque!");
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine();
+            else
+            {
+                Console.WriteLine("XEQUEMATE!");
+                Console.WriteLine("Vencedor: " + partida.jogadorAtual);
+            }
         }
 
         public static void  imprimirPecasCapturadas(PartidaDeXadrez partida)
